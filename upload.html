@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Makeup Upload</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: pink;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: #ffe0f0;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            width: 600px;
+        }
+
+        h1 {
+            color: #d95fcb;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            border: 2px solid #da70d6;
+            padding: 6px;
+            border-radius: 10px;
+            color: #da70d6;
+            margin-bottom: 20px;
+        }
+
+        .checklist-label {
+            font-weight: bold;
+            margin: 20px 0 10px;
+            color: #d95fcb;
+            font-size: 18px;
+        }
+
+        .makeup-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 40px;
+            justify-items: start;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: fit-content;
+        }
+
+        .makeup-grid label {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .makeup-grid input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .submit-btn {
+            background-color: #da70d6;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #bf5f9b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Image for Makeup Advice</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file"><br>
+
+            <div class="checklist-label">✨ What makeup items do you have? ✨</div>
+            <div class="makeup-grid">
+                <label><input type="checkbox" name="products" value="Foundation" checked> Foundation</label>
+                <label><input type="checkbox" name="products" value="Concealer" checked> Concealer</label>
+                <label><input type="checkbox" name="products" value="Blush" checked> Blush</label>
+                <label><input type="checkbox" name="products" value="Primer"> Primer</label>
+                <label><input type="checkbox" name="products" value="Eyeliner" checked> Eyeliner</label>
+                <label><input type="checkbox" name="products" value="Fake Lashes"> Fake Lashes</label>
+                <label><input type="checkbox" name="products" value="Mascara" checked> Mascara</label>
+                <label><input type="checkbox" name="products" value="Colored Mascara"> Blue Mascara</label>
+                <label><input type="checkbox" name="products" value="Lipstick" checked> Red Lipstick</label>
+                <label><input type="checkbox" name="products" value="Lipstick" checked> Nude Lipstick</label>
+                <label><input type="checkbox" name="products" value="Lip Gloss" checked> Lip Gloss</label>
+                <label><input type="checkbox" name="products" value="Pink Eyeshadow"> Red Eyeshadow</label>
+                <label><input type="checkbox" name="products" value="Brown Eyeshadow"> Orange Eyeshadow</label>
+                <label><input type="checkbox" name="products" value="Blue Eyeshadow"> Yellow Eyeshadow</label>
+                <label><input type="checkbox" name="products" value="Green Eyeshadow"> Green Eyeshadow</label>
+                <label><input type="checkbox" name="products" value="Pink Eyeshadow"> Blue Eyeshadow</label>
+                <label><input type="checkbox" name="products" value="Brown Eyeshadow"> Pink Eyeshadow</label>
+                <label><input type="checkbox" name="products" value="Blue Eyeshadow"> Purple Eyeshadow</label>
+                <label><input type="checkbox" name="products" value="Green Eyeshadow"> Nude Eyeshadow</label>
+                <label><input type="checkbox" name="products" value="Highlighter" checked> Highlighter</label>
+                <label><input type="checkbox" name="products" value="Setting Spray" checked> Setting Spray</label>
+            </div>
+
+            <button class="submit-btn" type="submit">Upload ✨</button>
+        </form>
+    </div>
+</body>
+</html>

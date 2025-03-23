@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Here's Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background: linear-gradient(to bottom right, #ffe4ec, #ffd9f7);
+            color: #444;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fff0f6;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d65db1;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .caption-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #444;
+        }
+
+        .caption-text {
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .routine-title {
+            font-weight: bold;
+            color: #d65db1;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .steps {
+            text-align: left;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+            color: #444;
+            padding: 0 20px;
+        }
+
+        .steps p {
+            margin-bottom: 12px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            color: #fff;
+            background-color: #d65db1;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: #ba4ca0;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #f3c6df;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Here's Your Makeup Advice</h1>
+        <img src="data:image/jpeg;base64,{{ image_data }}" alt="Uploaded Image"/>
+
+        <div class="caption-title">Caption:</div>
+        <div class="caption-text">{{ caption }}</div>
+
+        <hr>
+
+        <div class="routine-title">Makeup Routine:</div>
+        <div class="steps">
+            {% for step in steps %}
+                <p>{{ step }}</p>
+            {% endfor %}
+        </div>
+
+        <a href="/">✨ Upload another image ✨</a>
+    </div>
+</body>
+</html>
