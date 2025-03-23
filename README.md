@@ -1,0 +1,2 @@
+# BlushAI
+AI MakeUp Guru
