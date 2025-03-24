@@ -12,3 +12,5 @@ We use:
 
 - 🖼️ **BLIP (Bootstrapping Language-Image Pretraining)** 
 - 🤖 **GPT-4**
+
+“Help me develop an AI makeup tool that processes uploaded images, determines which products the user owns, and generates step-by-step instructions on how to replicate the makeup look” prompt. _ChatGPT_, 20 March version, OpenAI, 20 March 2025, chat.openai.com.
